@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :users
 
   get '/photolist', to: 'photos#show'
+  get '/photoupload',   to: 'photos#new'
+  post '/photoupload',   to: 'photos#create'
   resources :photos
 
   root 'static_pages#about'

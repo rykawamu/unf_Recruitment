@@ -1,0 +1,36 @@
+<% provide(:title, "Photo") %>
+<h1>写真アップロード</h1>
+
+<% if @photos.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@photos.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+  <ul>
+  <% @photos.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div>
+    <%= form_with model: @photos, local: true, url: photoupload_path do |f| %>
+
+        <div class="field">
+            <%= f.label "タイトル" %>
+            <%= f.text_field :title %>
+        </div>
+
+        <div class="field">
+            <%= f.label "画像ファイル" %>
+            <%= f.file_field :picture %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "アップロード" %>
+        </div>
+
+    <% end %>
+
+    <p><%= link_to "キャンセル", photolist_path %></p>
+</div>
