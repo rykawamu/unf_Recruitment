@@ -119,7 +119,7 @@ Finished in 4.149419s, 5.5429 runs/s, 7.2299 assertions/s.
 $ rails server
 ```
 
-起動したら、「http://localhost:3000」にアクセスする。  
+起動したら、「 http://localhost:3000 」にアクセスする。  
 アクセスすると、「ログイン画面」に遷移する。
 
 
