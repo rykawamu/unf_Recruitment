@@ -1,6 +1,8 @@
 <% provide(:title, "Photo") %>
 <h1>Photo List</h1>
 
+<%= link_to '写真をアップロード', new_photo_path %>
+
 <div>
 <% if @user.photos.any? %>
   <h3>Photos (<%= @user.photos.count %>)</h3>
