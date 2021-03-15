@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   get 'sessions/new'
   resources :users
 
-  get '/photolist', to: 'static_pages#about'
+  get '/photolist', to: 'photos#show'
+  resources :photos
 
   root 'static_pages#about'
   get '/about', to: 'static_pages#about'

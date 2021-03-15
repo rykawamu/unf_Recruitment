@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: "Title1"
+  picture: "sample1.png"
+  user: one
+
+two:
+  title: "Title2"
+  picture: "sample2.png"
+  user: two
+
+three:
+  title: "Title3"
+  picture: "sample3.png"
+  user: two

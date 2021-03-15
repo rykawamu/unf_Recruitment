@@ -28,3 +28,33 @@ User.create!(
     }
   ]
 )
+
+#=begin
+photo_user = User.create(
+    {
+        name: 'photo',
+        email: 'photo@example.com',
+        password: 'foobar',
+        password_confirmation: 'foobar'
+    }
+)
+Photo.create!(
+  [
+    {
+        title: 'title_photo_1',
+        picture: 'picture_photo_1.png',
+        user_id: photo_user.id
+    },
+    {
+        title: 'title_photo_2',
+        picture: 'picture_photo_2.png',
+        user_id: photo_user.id
+    },
+    {
+        title: 'title_photo_3',
+        picture: 'picture_photo_3.png',
+        user_id: photo_user.id
+    }
+  ]
+)
+# =end

@@ -1,0 +1,11 @@
+<% provide(:title, "Photo") %>
+<h1>Photo List</h1>
+
+<div>
+<% if @user.photos.any? %>
+  <h3>Photos (<%= @user.photos.count %>)</h3>
+  <ol class="photos">
+    <%= render @photos %>
+  </ol>
+<% end %>
+</div>
